@@ -1,5 +1,7 @@
 # Proyecto Creación de Objetos
-Nombre y Matrícula: Aranza Ramírez Mora - A01707746
+Nombre: Aranza Ramírez Mora.
+
+Matrícula: A01707746.
 
 Este trabajo es el avance 1 del proyecto de "Pensamiento Computacional Orientado a Objetos".
 
