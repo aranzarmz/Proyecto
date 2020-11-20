@@ -1,45 +1,45 @@
 #include<iostream>
 #include<string>
+#include "Producto.h"
+#ifndef ZAPATOS_H_
+#define ZAPATOS_H_
+
 using namespace std;
 
-// Se crea la clase "Zapatos"
-class Zapatos{
+// Se crea la clase hija "Zapatos"
+class Zapatos : public Producto {
+	
 	private:
-	  // Tendrá dos atributos, talla y color
-	  float talla;
-	  string color;
+	  // Tendrá dos atributos, precio y cantidad de zapatos
+	  float precio;
+	  int cantidad_z;
 	
 	public:
-	  // Constructor por default
-	  Zapatos(): talla(0), color("blanco"){};
-	  
-	  // Constructor con parámetros
-	  Zapatos(float tall, string col): talla(tall), color(col){};
+	  /*// Constructor por default
+	  Pantalones():talla(0.0), color(""){};*/
 	
-	  // Getter y setter de "talla"
-	  float get_tallaz();
-	  void set_tallaz(float);
+	  // Constructor con parámetros
+	  Zapatos(float tall, string col, float p, int can): 
+	    Producto(tall,col),precio(p),cantidad_z(can){};
+	
+	  // Métodos
+	  float consultaPrecio(int);
+	  int comprar(int);
 	  
-	  // Getter y setter de "color"
-	  string get_colorz();
-	  void set_colorz(string);
 };
 
-// Funciones getters
-float Zapatos::get_tallaz(){
-	return talla;
+//Función para consultar el precio
+float Zapatos::consultaPrecio(int pares){
+	cout<<"Cada par de zapatos cuesta $450.00"<<endl;
+	precio = pares * 450;
+	return precio;
 }
 
-string Zapatos::get_colorz(){
-	return color;
+// Función para comprar
+int Zapatos::comprar(int pares){
+	cantidad_z = pares * 2;
+	return cantidad_z;
 }
 
-// Funciones setters
-void Zapatos::set_tallaz(float tall){
-	talla = tall;
-}
-
-void Zapatos::set_colorz(string col){
-	color = col;
-}
+#endif
 

@@ -1,45 +1,35 @@
 #include<iostream>
 #include<string>
+#include "Producto.h"
+#ifndef PANTALONES_H_
+#define PANTALONES_H_
+
 using namespace std;
 
-// Se crea la clase "Pantalones"
-class Pantalones{
+// Se crea la clase hija "Pantalones"
+class Pantalones : public Producto {
+	
 	private:
-	  // Tendrá dos atributos, talla y color
-	  float talla;
-	  string color;
+	  // Tendrá un atributo, género
+	  string genero;
 	
 	public:
-	  // Constructor por default
-	  Pantalones(): talla(0), color("blanco"){};
-	  
-	  // Constructor con parámetros
-	  Pantalones(float tall, string col): talla(tall), color(col){};
+	  /*// Constructor por default
+	  Pantalones():talla(0.0), color(""){};*/
 	
-	  // Getter y setter de "talla"
-	  float get_tallapa();
-	  void set_tallapa(float);
+	  // Constructor con parámetros
+	  Pantalones(float tall, string col, string gen): 
+	    Producto(tall,col),genero(gen){};
+	
+	  // Métodos
+	  string checar_genero();
 	  
-	  // Getter y setter de "color"
-	  string get_colorpa();
-	  void set_colorpa(string);
 };
 
-// Funciones getters
-float Pantalones::get_tallapa(){
-	return talla;
+// Función checar_genero
+string Pantalones::checar_genero(){
+	return genero;
 }
 
-string Pantalones::get_colorpa(){
-	return color;
-}
-
-// Funciones setters
-void Pantalones::set_tallapa(float tall){
-	talla = tall;
-}
-
-void Pantalones::set_colorpa(string col){
-	color = col;
-}
+#endif
 
