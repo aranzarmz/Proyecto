@@ -8,7 +8,7 @@ using namespace std;
 // Se crea la clase padre "Producto"
 class Producto{
 	
-	private:
+	protected:
 	  //Atributos que se heredarán a todas las clases hijas
 	  float	talla;
 	  string color;

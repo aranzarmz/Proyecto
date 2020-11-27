@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string>
+#include <sstream>
 #include "Producto.h"
 #ifndef PLAYERAS_H_
 #define PLAYERAS_H_
@@ -14,7 +15,7 @@ class Playeras : public Producto {
 	  string tipo_corte;
 	
 	public:
-	  /*//Constructor por default
+	  /* Constructor por default
 	  Playeras():talla(0.0), color(""){};*/
 	
 	  // Constructor con parámetros
@@ -23,12 +24,21 @@ class Playeras : public Producto {
 	
 	  // Métodos
 	  string get_tipo_corte();
+	  string toString();
 	  
 };
 
 // Función get_tipo_corte
 string Playeras::get_tipo_corte(){
 	return tipo_corte;
+}
+
+// Función toString
+string Playeras::toString(){
+
+    stringstream aux;
+    aux<<"La talla es: " <<talla<<" , su color es: "<<color<<" ,su tipo de corte es: "<<tipo_corte<< "\n";
+    return aux.str();
 }
 
 #endif
