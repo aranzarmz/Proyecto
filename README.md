@@ -1,13 +1,11 @@
-# Avance Revisión Final
+# Proyecto Final
 Nombre: Aranza Ramírez Mora.
 
 Matrícula: A01707746.
 
-Este trabajo es el avance para la revisión del proyecto de "Pensamiento Computacional Orientado a Objetos".
+Este trabajo es el proyecto final de "Pensamiento Computacional Orientado a Objetos".
 
 Se trabajarán e implementarán nuevos conceptos de programación usando el lenguaje de C++, con la finalidad de poder entender mejor acerca de la proramación orientada a objetos, cómo funciona y para qué se usa.
-
-Dentro de este avance se deja incluido todo lo que se venía trabajando en los primeros tres avances, y al tener todas competencias necesarias acreditadas no se hará ningún cambio a menos de que haya alguna corrección por parte del profesor.
 
 # Contexto
 Una tienda de ropa llamada "Sway Store" quiere expandirse y darse a conocer a un público más internacional, para ello, han decidido crear un catálogo online en el cuál los usuarios pueden elegir la opción que deseen ver de los productos que la tienda tiene para ofrecerles. Cada producto tiene su talla y color definido. Además, las playeras tendrán su tipo de corte, los pantalones tendrán su género y se podrán hacer compras para los zapatos.
