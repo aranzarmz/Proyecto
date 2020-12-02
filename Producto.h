@@ -5,7 +5,10 @@
 
 using namespace std;
 
-// Se crea la clase padre "Producto"
+/**
+ * Declaración de clase padre Producto, que maneja tres clases hijas: 
+ * Playeras, Zapatos y Pantalones
+ */
 class Producto{
 	
 	protected:
@@ -14,10 +17,18 @@ class Producto{
 	  string color;
 	
 	public:
-	  // Constructor por default
+	  /**
+       * Constructor por default
+       * @param
+       * @return Objeto Producto
+      */
 	  Producto(): talla(0.0), color(""){};
 	  
-	  // Constructor con parámetros
+	  /**
+	   * Constructor de la clase
+	   * @param float tall: Talla del producto
+	   * @param string col: Color del producto
+	  */
 	  Producto(float tall, string col): talla(tall), color(col){};
 	  
 	  // Métodos que se heredarán a todas las clases hijas
@@ -31,20 +42,34 @@ class Producto{
 	
 };
 
-// Funciones getters
+/**
+ * Obtiene la talla del producto
+ * @return talla: Talla del producto
+*/
 float Producto::get_talla(){
 	return talla;
 }
 
+/**
+ * Obtiene el color del producto
+ * @return color: color del producto
+*/
 string Producto::get_color(){
 	return color;
 }
 
-// Funciones setters
+/**
+ * Establece la talla del producto
+ * @param float tall: talla del producto
+*/
 void Producto::set_talla(float tall){
 	talla = tall;
 }
 
+/**
+ * Establece el color del producto
+ * @param string col: color del producto
+*/
 void Producto::set_color(string col){
 	color = col;
 }

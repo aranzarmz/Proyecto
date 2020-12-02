@@ -6,27 +6,32 @@
 
 using namespace std;
 
-// Se crea la clase hija "Pantalones"
+//Declaro la clase Pantalones que hereda de Producto
 class Pantalones : public Producto {
 	
 	private:
-	  // Tendrá un atributo, género
+	  // Variable de instancia, género
 	  string genero;
 	
 	public:
-	  /*// Constructor por default
-	  Pantalones():talla(0.0), color(""){};*/
-	
-	  // Constructor con parámetros
+	  /**
+	   * Constructor de la clase
+	   * @param float tall: Talla del pantalón
+	   * @param string col: Color del pantalón
+	   * @param string gen: Género del pantalón
+	  */
 	  Pantalones(float tall, string col, string gen): 
 	    Producto(tall,col),genero(gen){};
 	
-	  // Métodos
+	  // Método
 	  string checar_genero();
 	  
 };
 
-// Función checar_genero
+/**
+ * Obtiene el género del pantalón
+ * @return genero: género del pantalón
+*/
 string Pantalones::checar_genero(){
 	return genero;
 }

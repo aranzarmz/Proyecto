@@ -4,10 +4,10 @@
 
 using namespace std;
 /*
-Creamos una clase llamada "Tienda", en la cual uno de sus componentes será la clase padre "Producto", es decir, si se destruye
-la clase "Tienda", la clase "Producto" también lo hará
+* Creamos una clase llamada "Tienda", en la cual uno de sus componentes será la 
+* clase padre "Producto", es decir, si se destruye
+* la clase "Tienda", la clase "Producto" también lo hará
 */
-
 class Tienda{
 	
 	private:
@@ -19,11 +19,16 @@ class Tienda{
 	  int mensaje(int);
 };
 
-// Función "mensaje"
+/**
+ * Método "mensaje", se utiliza para preguntarle al usuario si quiere ingresar a la tienda
+ * @param int ingreso: un número que ingrese el usuario
+ * @return int ingreso: opción correspondiente de ingreso
+ */
 int Tienda::mensaje(int ingreso){
 	
-	/*Si el usuario ingresara un número 1, se crearán objetos de las clases hijas utilizando métodos getters y setters
-	y se desplegará un menú con diferentes opciones para ver el catálogo de los productos de la tienda
+	/*Si el usuario ingresara un número 1, se crearán objetos de las clases hijas 
+	 * utilizando métodos getters y setters y se desplegará un menú con diferentes 
+	 * opciones para ver el catálogo de los productos de la tienda
 	*/
 	
 	if (ingreso == 1) {
@@ -38,24 +43,6 @@ int Tienda::mensaje(int ingreso){
 	// Creando objetos de la clase hija "Zapatos" con parámetros predeterminados.
 	Zapatos z1(25.0, "negro",900.00,2);
 	Zapatos z2(23.0, "gris",450.00,1);
-	
-	/*
-	// Creando objeto utilizando los setters de la clase "Playeras"
-	Playeras p3;
-	p3.set_talla(6.0);
-	p3.set_color("rosa");
-	
-	// Creando objeto utilizando los setters de la clase "Pantalones"
-	Pantalones pan3;
-	pan3.set_talla(5.0);
-	pan3.set_color("blanco");
-	
-	
-	//Creando objeto utilizando los setters de la clase "Zapatos"
-	Zapatos z3;
-	z3.set_talla(24.0);
-	z3.set_color("negro");
-	*/
 	
 	cout<<"Bienvenido a la SwayStore, que desea ver?"<<endl;
 	int opcion = 0;
@@ -78,7 +65,6 @@ int Tienda::mensaje(int ingreso){
 		if(opcion == 1){
 			cout<<"Color de playera 1: "<<p1.get_color()<<"\n Talla: "<<p1.get_talla()<<"\n Tipo de corte: "<<p1.get_tipo_corte()<<endl;
 			cout<<"Color de playera 2: "<<p2.get_color()<<"\n Talla: "<<p2.get_talla()<<"\n Tipo de corte: "<<p2.get_tipo_corte()<<endl;
-			//cout<<"Color de playera 3: "<<p3.get_color()<<"\n Talla: "<<p3.get_talla()<<endl;
 		}
 		
 		// Si la opción es 2, se mostrarán los colores y las tallas de cada objeto utilizando los getters de la clase "Pantalones"
@@ -86,17 +72,16 @@ int Tienda::mensaje(int ingreso){
 		else if(opcion == 2){
 			cout<<"Color de pantalon 1: "<<pan1.get_color()<<"\n Talla: "<<pan1.get_talla()<<"\n Genero: "<<pan1.checar_genero()<<endl;
 			cout<<"Color de pantalon 2: "<<pan2.get_color()<<"\n Talla: "<<pan2.get_talla()<<"\n Genero: "<<pan2.checar_genero()<<endl;
-			//cout<<"Color de pantalon 3: "<<pan3.get_color()<<"\n Talla: "<<pan3.get_talla()<<endl;
 		}
 		
 		// Si la opción es 3, se mostrarán los colores y las tallas de cada objeto utilizando los getters de la clase "Zapatos"
 		else if(opcion == 3){
 			cout<<"Color de zapatos 1: "<<z1.get_color()<<"\n Talla: "<<z1.get_talla()<<endl;
 			cout<<"Color de zapatos 2: "<<z2.get_color()<<"\n Talla: "<<z2.get_talla()<<endl;
-			//cout<<"Color de zapatos 3: "<<z3.get_color()<<"\n Talla: "<<z3.get_talla()<<endl;
 		}
 		
-		// Si la opción es 4, el usuario podrá hacer compras de pares de zapatos, así como consultar el precio y la cantidad de pares de zapatos que ha comprado
+		/* Si la opción es 4, el usuario podrá hacer compras de pares de zapatos, así como consultar 
+		   el precio y la cantidad de pares de zapatos que ha comprado */
 		else if(opcion == 4){
 			int pares;
 			float pago;

@@ -7,18 +7,20 @@
 
 using namespace std;
 
-// Se crea la clase hija "Playeras"
+//Declaro la clase Playeras que hereda de Producto
 class Playeras : public Producto {
 	
 	private:
-	  // Tendrá un atributo, tipo de corte
+	  // Variable de instancia, tipo de corte
 	  string tipo_corte;
 	
 	public:
-	  /* Constructor por default
-	  Playeras():talla(0.0), color(""){};*/
-	
-	  // Constructor con parámetros
+	  /**
+	   * Constructor de la clase
+	   * @param float tall: Talla de la playera
+	   * @param string col: Color de la playera
+	   * @param string cor: Tipo de corte de la playera
+	  */
 	  Playeras(float tall, string col, string cor): 
 	    Producto(tall,col),tipo_corte(cor){};
 	
@@ -28,17 +30,12 @@ class Playeras : public Producto {
 	  
 };
 
-// Función get_tipo_corte
+/**
+ * Obtiene el tipo de corte de la playera
+ * @return tipo_corte: tipo de corte de la playera
+*/
 string Playeras::get_tipo_corte(){
 	return tipo_corte;
-}
-
-// Función toString
-string Playeras::toString(){
-
-    stringstream aux;
-    aux<<"La talla es: " <<talla<<" , su color es: "<<color<<" ,su tipo de corte es: "<<tipo_corte<< "\n";
-    return aux.str();
 }
 
 #endif
